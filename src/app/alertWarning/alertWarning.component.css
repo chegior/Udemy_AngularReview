@@ -1,0 +1,23 @@
+.messageBox{
+    
+    border: solid red;
+    padding: 30px;
+    margin: 50px;
+    height: 100px;
+    width: 350px;
+    align-content: center;
+    text-align: center;
+    font: 1.5em arial;
+    
+}   
+.messageBox,
+p{
+    background: mistyrose;
+}
+span{
+    color:darkred;
+}
+
+.fas{
+    color:lightpink;
+}

@@ -1,0 +1,23 @@
+.messageBox{
+    
+    border: solid green;
+    padding: 30px;
+    margin: 50px;
+    height: 100px;
+    width: 350px;
+    align-content: center;
+    text-align: center;
+    font: 1.5em arial;
+    
+}
+.messageBox,
+p{
+    background: lightcyan;
+}
+span{
+    color:darkolivegreen;
+}
+
+.fa-thumbs-up{
+    color:green;
+}
