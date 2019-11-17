@@ -1,4 +1,8 @@
-<p>Server with ID: 
-    {{serverID}} 
+<p [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{online: serverStatus === 'online',
+    offline:serverStatus==='offline'}">Server with ID: 
+    {{serverID}} <!--String Interpolation Syntax-JS
+    Any expresion cant resolve will show a STRING, 
+    cant ride mutli line expressions-->
     with status of 
     {{getServerStatus()}}</p>

@@ -10,7 +10,11 @@ allowNewServer = false;
 serverCreation = 'No Server was created';
 serverName = '';
 username = '';
-port =''
+port ='';
+serverCreated =false;
+servers = ['testServer1','testServer2','testServer3'];
+items =[];
+item = '';
   constructor() { 
     setTimeout(()=>{
       this.allowNewServer = true;
@@ -22,7 +26,12 @@ port =''
   }
 
   onCreateServer(){
+    console.log(this.serverName);
+    this.servers.push(this.serverName);
     this.serverCreation = " Server was created " + this.serverName;
+    this.serverCreated = true;
+    
+    console.log(this.servers);
 
   }
   onUpdateServerName(event: Event){
@@ -33,5 +42,11 @@ port =''
 
   onLogIn(){
     this.username ='';  
+  }
+
+  onLogItem(){
+    this.items.push(this.item);
+    console.log(this.items);
+    this.item='';
   }
 }

@@ -1,14 +1,21 @@
 <h2>This is the new COMPONENT create by CLI - SERVERS</h2>
-
-<button class="btn btn-primary" [disabled]="!allowNewServer" >Add Server</button>
+<input type="text"
+    class="form-control"
+    [(ngModel)] = "serverName"
+>
+<button (click) = "onCreateServer()" class="btn btn-primary" [disabled]="!allowNewServer" >
+    Add Server</button>
 <p [innerText]="allowNewServer"></p>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor = "let server of servers"></app-server>
+
 
 <button class=" btn btn-primary" (click) = "onCreateServer()">Connected</button>
-<p><br> At this time {{serverCreation}}</p>
+<!--<p><br> At this time {{serverCreation}}</p>-->
 <hr>
-<label>The Server Name is:  {{serverName}}</label>
+<p *ngIf="serverCreated;else noServer">The Server Name is:  {{serverName}}</p>
+<ng-template #noServer>
+    <p>No server was created</p>
+</ng-template>
 <input type="text"
     class="form-control"
     (input) = "onUpdateServerName($event)"
@@ -39,5 +46,13 @@
         </div>
     </div>
 
-    
+
+<input type="text" [(ngModel)] = "item">
+<button class="btn btn-primary"
+(click)="onLogItem()">Display Details
+</button>
+<div *ngFor= "let item of items">{{items}}
+<div>
+
+</div>
     
