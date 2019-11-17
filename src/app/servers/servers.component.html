@@ -1,5 +1,24 @@
 <h2>This is the new COMPONENT create by CLI - SERVERS</h2>
+
+<button class="btn btn-primary" [disabled]="!allowNewServer" >Add Server</button>
+<p [innerText]="allowNewServer"></p>
 <app-server></app-server>
 <app-server></app-server>
-<app-server></app-server>
+
+<button class=" btn btn-primary" (click) = "onCreateServer()">Connected</button>
+<p><br> At this time {{serverCreation}}</p>
 <hr>
+<label>The Server Name is:  {{serverName}}</label>
+<input type="text"
+    class="form-control"
+    (input) = "onUpdateServerName($event)"
+    >
+    <!--reserve variable you can use in the HTML- template for ythe binding-->
+
+
+    <!--This use data 2-way-binding using DIRECTIVE : ngModel-->
+<label>Connection: {{port }} </label>
+<input type="text"
+    class="form-control"
+    [(ngModel)] = "port" 
+>
